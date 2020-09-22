@@ -44,16 +44,20 @@ def store_last_seen(FILE_NAME, last_seen_id):
     file_write.close()
     return
 #writing
-tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
 #print(tweets[0].text)
-
-for tweet in reversed(tweets):
-    if '#twibot' in tweet.full_text.lower():
-        print(str(tweet.id)+' - ' + tweet.full_text)
-        api.update_status("@" + tweet.user.screen_name + " twitbot worked :) ", tweet.id)
-        store_last_seen(FILE_NAME,tweet.id)
+def reply():
+    tweets = api.mentions_timeline(read_last_seen(FILE_NAME), tweet_mode='extended')
+    for tweet in reversed(tweets):
+        if '#twibot' in tweet.full_text.lower():
+            print(str(tweet.id)+' - ' + tweet.full_text)
+            api.update_status("@" + tweet.user.screen_name + " twitbot worked ,changa:) ", tweet.id)
+            api.create_favorite(tweet.id)
+            api.retweet(tweet.id)
+            store_last_seen(FILE_NAME,tweet.id)
         
-        
+while True:
+    reply()
+    time.sleep(122)    
         
         
         
