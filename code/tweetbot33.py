@@ -11,10 +11,10 @@ import tweepy
 import time 
 
 #keys generated from twitter developer site
-consumer_key = '5e5WgwCxMLiaw1R4IWGC'
-consumer_secret = 'Y2hd3GqJo6riNQ8Z6oyPpWgJsO66lGFLcyosF8aWIVYnM'
-key = '917-9BY2fRbBZ93DVzRynX29H2RAB0J7g2a3509cgAl4T'
-secret = 'GFQLLhVT03zMi3vSRsa5Wpd2kyMUEf99XrZ3Iibv'
+consumer_key = 'KL8dn5e5WgwCxMLiaw1R4IWGC'
+consumer_secret = 'sFEo5Y2hd3GqJo6riNQ8Z6oyPpWgJsO66lGFLcyosF8aWIVYnM'
+key = '99275917-9BY2fRbBZ93DVzRynX29H2RAB0J7g2a3509cgAl4T'
+secret = 'HR1H1GFQLLhVT03zMi3vSRsa5Wpd2kyMUEf99XrZ3Iibv'
 
 '''consumer_key = 'ZGKPdPsl5XrWqZdLlZrmZUndf'
 consumer_secret = 'iJLEa8OmGb0o1wLS0fui0DGk0189xMk80NIBu8VWH2fWo8d89c'
